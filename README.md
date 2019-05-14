@@ -1,2 +1,1 @@
-# prueba
-Prueba
+<h1>JavaScript</h1>
