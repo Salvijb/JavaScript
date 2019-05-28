@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var numero=parseInt(prompt("Escriba un número"));
+            var cuadrada=Math.sqrt(numero);
+            var cubica=Math.cbrt(numero);
+            $("#numero").html("El numero insertado es "+numero);
+            $("#raizcuadrada").html("La raiz cuadrada es "+cuadrada);
+            $("#raizcubica").html("La raiz cúbica es "+cubica);
+        });
+    </script>
+</head>
+<body>
+    <h3 id="numero"></h3>
+    <p id="raizcuadrada"></p>
+    <p id="raizcubica"></p>
+</body>
+</html>
