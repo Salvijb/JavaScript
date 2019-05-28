@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        
+            var ladoa=prompt("Inserta el primer lado del triangulo");
+            var ladob=prompt("Inserta otro lado del triangulo");
+            var ladoc=prompt("Inserta el ultimo lado del triangulo");
+            var acuadrado=Math.pow(ladoa,2);
+            var bcuadrado=Math.pow(ladob,2);
+            var ccuadrado=Math.pow(ladoc,2);
+
+            if (ladoa==ladob && ladoa==ladob)
+            {
+                $("#total").html("Triangulo equilátero");
+            }
+            if (ladoa!=ladob && ladoa!=ladoc && ladob!=ladoc)
+            {
+                $("#total").html("Triangulo escaleno");
+            }
+            if (ladoa==ladob && ladoa!=ladoc)
+            {
+                $("#total").html("Triangulo isosceles");
+            }
+            if (ladoa==ladoc && ladoa!=ladob)
+            {
+                $("#total").html("Triangulo isosceles");
+            }
+            if (ladoc==ladob && ladoa!=ladoc)
+            {
+                $("#total").html("Triangulo isosceles");
+            }
+            if (acuadrado==(bcuadrado+ccuadrado))
+            {
+                $("#total").html("Triangulo rectangulo");
+            }
+            if (bcuadrado==(acuadrado+ccuadrado))
+            {
+                $("#total").html("Triangulo rectangulo");
+            }
+            if (ccuadrado==(bcuadrado+acuadrado))
+            {
+                $("#total").html("Triangulo rectangulo");
+            }
+        });
+</script>
+</head>
+<body>
+    <p id="total"></p>
+    <p id="total2"></p>
+</body>
+</html>
