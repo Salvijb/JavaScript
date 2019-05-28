@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var primeracali=parseInt(prompt("Escribe la nota del primer parcial"));
+            var segundacali=parseInt(prompt("Escribe la nota del segundo parcial"));
+            var terceracali=parseInt(prompt("Escribe la nota del tercer parcial"));
+            var examenfinal=parseInt(prompt("Escribe la nota del examen final"));
+            var trabajofinal=parseInt(prompt("Escribe la nota del trabajo final"));
+            var mediacali=(primeracali + segundacali + terceracali) / 3;
+            var porcentajecali=mediacali*0.55;
+            var porcentajeexamen=examenfinal*0.30;
+            var porcentajetrabajo=trabajofinal*0.15;
+            var notafinal=porcentajecali + porcentajeexamen + porcentajetrabajo;
+            $("#total").html("Tu nota final es: " + notafinal);
+        });
+    </script>
+</head>
+<body>
+    <h2 id="total"></h2>
+</body>
+</html>
