@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var base=prompt("Inserta la base: ");
+            var altura=prompt("Inserta la altura: ");
+            var area="El area es: " + base*altura;
+            var perimetro="El perimetro es: " + 2*base+2*altura;
+            $("#outputarea").html(area);
+            $("#outputperimetro").html(perimetro);
+        });
+        </script>
+</head>
+<body>
+    <div id="outputarea"></div>
+    <div id="outputperimetro"></div>
+</body>
+</html>
