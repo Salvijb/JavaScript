@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var numero=prompt("Escriba un numero de dos cifras");
+            while  (numero<10 || numero>=99)
+            {
+                numero=parseInt(prompt("El numero introducido no es de dos cifras, pruebe con otro que este entre 10 y 99"));
+            };
+            var resto=numero%10;
+            var restar=(numero-resto)/10;
+            $("#total").html("El numero introducido es: "+ numero);
+            $("#resultado").html("Este al revés es: "+ resto+restar);
+        });
+    </script>
+</head>
+<body>
+    <h3 id="total"></h3>
+    <p id="resultado"></p>
+</body>
+</html>
