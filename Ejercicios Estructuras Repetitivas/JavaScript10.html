@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            var a=1,b=2,c=3,d=4,e=5;
+
+            for (var cont=10; cont>=0; cont--)
+            {
+                mult=a*cont;
+                $("#total").prepend( a + " x " + cont + " = " + mult + "<br/>");
+                mult=b*cont;
+                $("#total1").prepend( b + " x " + cont + " = " + mult + "<br/>");
+                mult=c*cont;
+                $("#total2").prepend( c + " x " + cont + " = " + mult + "<br/>");
+                mult=d*cont;
+                $("#total3").prepend( d + " x " + cont + " = " + mult + "<br/>");
+                mult=e*cont;
+                $("#total4").prepend( e + " x " + cont + " = " + mult + "<br/>");
+
+            }
+
+        });
+        </script>
+        <style>
+        table{
+            margin-left: 35%;
+            margin-top: 15%;
+        }
+        td{
+            border: 1px solid black;
+        }
+        </style>
+</head>
+<body>
+    <table>
+        <td id="total"></td>
+        <td id="total1"></td>
+        <td id="total2"></td>
+        <td id="total3"></td>
+        <td id="total4"></td>
+    </table>
+</body>
+</html>
