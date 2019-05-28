@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var salariobase=parseInt(prompt("Inserta el salario base"));
+            var venta1=parseInt(prompt("Inserta el importe de la primera venta"));
+            var venta2=parseInt(prompt("Inserta el importe de la segunda venta"));
+            var venta3=parseInt(prompt("Inserta el importe de la tercera venta"));
+            var comision1=venta1*0.1;
+            var comision2=venta2*0.1;
+            var comision3=venta3*0.1;
+            var totalsalario=salariobase + comision1 + comision2 + comision3;
+            $("#total").html("El total de tu salario será: " + totalsalario + "€");
+            $("#comision1").html("De la primera venta te llevas: " + comision1 + "€");
+            $("#comision2").html("De la segunda venta te llevas: " + comision2 + "€");
+            $("#comision3").html("De la tercera venta te llevas: " + comision3 + "€");
+        });
+    </script>
+</head>
+<body>
+    <h2 id="total"></h2>
+    <p id="comision1"></p>
+    <p id="comision2"></p>
+    <p id="comision3"></p>
+</body>
+</html>
