@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var acertadas=prompt("Inserta el numero de preguntas correctas has tenido");
+            var falladas=prompt("Inserta el numero de preguntas erroneas has tenido");
+
+            var calculo1=acertadas * 5;
+            var calculo2=falladas * 1;
+
+            var total= calculo1 - calculo2;
+
+            $("#resultado").html("Tu nota final es un " + total);
+            $("#sumado").html("De las preguntas correctas has sumado " + calculo1 + " puntos");
+            $("#restado").html("De las preguntas erroneas has restado " + calculo2 + " puntos");
+        });
+    </script>
+</head>
+<body>
+    <p id="resultado"></p>
+    <p id="sumado"></p>
+    <p id="restado"></p>
+</body>
+</html>
